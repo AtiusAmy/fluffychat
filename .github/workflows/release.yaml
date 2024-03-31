@@ -37,7 +37,7 @@ jobs:
           install: |
             echo Installing dependencies
             apt-get update -qq -y
-            apt install bash zip unzip curl file clang git cmake ninja-build pkg-config libgtk-3-dev libblkid-dev liblzma-dev libjsoncpp-dev cmake-data libsecret-1-dev libsecret-1-0 librhash0 libssl-dev libstdc++-12-dev xz-utils -y
+            apt install bash zip unzip curl file clang git sudo cmake ninja-build pkg-config libgtk-3-dev libblkid-dev liblzma-dev libjsoncpp-dev cmake-data libsecret-1-dev libsecret-1-0 librhash0 libssl-dev libstdc++-12-dev xz-utils -y
             echo Installing Flutter
             git clone https://github.com/flutter/flutter.git -b stable --depth 1 /opt/flutter
             /opt/flutter/bin/flutter doctor -v
