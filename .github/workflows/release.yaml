@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    timeout-minutes: 25
+    timeout-minutes: 2500
     steps:
       - name: "Code Checkout"
         uses: actions/checkout@v3
