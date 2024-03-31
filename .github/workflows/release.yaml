@@ -53,7 +53,7 @@ jobs:
             mv build/linux/arm64/release/bundle/* /AppDir/
             chown -R nonroot /AppDir/
             chmod -R a+rw /AppDir/
-            chmod +x /AppDir/dateapp
+            chmod +x /AppDir/fluffychat
 
       - name: Compress Flutter build
         id: compress
