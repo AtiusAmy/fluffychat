@@ -64,5 +64,6 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "fluffychat-linux-arm64.tar.gz"
+          tag: main
           commit: ${{ github.sha }}
           allowUpdates: true
