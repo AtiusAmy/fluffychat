@@ -54,17 +54,24 @@ jobs:
             chown -R nonroot /AppDir/
             chmod -R a+rw /AppDir/
             chmod +x /AppDir/fluffychat
-            ls /AppDir/
+
+      - name: List Files (debug)
+        run: | 
+          ls /AppDir/
 
       - name: Compress Flutter build
         id: compress
         run: |
+          echo "List root"
+          ls /
+          
+          echo "Compressing"
           archiveName="fluffychat-linux-arm64.tar.gz"
           echo "archiveName=$archiveName" >> $GITHUB_OUTPUT
           
           sudo chown -R $USER:$USER .
 
-          tar -C /AppDir -czf $archiveName .          
+          tar czf $archiveName /AppDir         
 
       - name: Release to GitHub
         uses: ncipollo/release-action@v1
