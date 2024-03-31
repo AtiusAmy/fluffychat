@@ -49,7 +49,7 @@ jobs:
             chown -R nonroot .
 
             echo Building
-            /opt/flutter/bin/flutter build linux --target-platform linux-arm64            
+            sudo -u nonroot /opt/flutter/bin/flutter build linux --target-platform linux-arm64            
 
       - name: Compress Flutter build
         id: compress
