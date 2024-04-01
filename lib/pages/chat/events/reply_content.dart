@@ -36,10 +36,11 @@ class ReplyContent extends StatelessWidget {
         : Theme.of(context).colorScheme.primary;
 
     return Material(
-      color: Theme.of(context)
-          .colorScheme
-          .background
-          .withOpacity(ownMessage ? 0.2 : 0.33),
+      color: backgroundColor ??
+          Theme.of(context)
+              .colorScheme
+              .background
+              .withOpacity(ownMessage ? 0.2 : 0.33),
       borderRadius: borderRadius,
       child: Row(
         mainAxisSize: MainAxisSize.min,
